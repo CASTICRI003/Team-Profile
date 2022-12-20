@@ -1,0 +1,26 @@
+{
+  "name": "team-profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CASTICRI003/Team-Profile.git"
+  },
+  "author": "CASTICRI003",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CASTICRI003/Team-Profile/issues"
+  },
+  "homepage": "https://github.com/CASTICRI003/Team-Profile#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^29.3.1"
+  }
+}
