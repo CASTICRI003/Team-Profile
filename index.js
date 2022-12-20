@@ -43,3 +43,50 @@ inquirer.prompt([
         }
       },
 ])
+.then(answers => {
+    const newManager = new Manager(
+    answers.name,
+    answers.id,
+    answers.email,
+    answers.officeNumber,
+    )
+    employees.push(newManager);
+    addEmployee();
+});
+
+function addEmployee() {
+    inquirer.prompt([
+        {
+            type: 'list',
+            name: 'team',
+            message: 'Who would you like to add to your team?',
+            choices: ['Engineer',
+        'Intern',
+    'Done'
+],
+        },
+    ])
+    .then(answers => {
+        if (answers.team === 'Engineer') {
+            addEngineer();
+        } else if (answers.team === 'Intern') {
+            addIntern();
+        } else {
+            createPage();
+        }
+    })
+};
+
+
+
+function addEngineer()
+
+
+
+
+
+function addIntern()
+
+
+
+function createPage()
