@@ -230,7 +230,50 @@ function generateIndex(answers) {
         </div>
     </div>`
 
-    
+    cards.push(card);
+        } else if (answers[i].getRole() === 'Intern') {
+            const card = `
+            <div class="col">
+    <div class="card shadow mb-5" style="width: 20rem;">
+    <div class="card-body" style="background-color: bisque;">
+        <h2 class ="card-title"> ${answers[i].name}</h2>
+        <h3 class="card-text">Intern</h3>
+    </div>
+    <ul class="list-group" style="background-color: aquamarine;">
+    <li class="list-group-item">ID: ${answers[i].id}</li>
+    <li class="list-group-item">Email: <a href="mailto:${answers[i].email}" class="card-link">${answers[i].email}</a></li>
+    <li class="list-group-item">School: ${answers[i].school}</li>
+</ul>
+</div>
+</div>`
+cards.push(card);
         }
     }
-}
+    let joinedCards = cards.join('');
+    const html = `
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Team Profiles</title>
+</head>
+
+<body>
+    <div class="container-fluid p-5" style="background-color: #6f42c1;">
+        <h1>The Team!</h1>
+    </div>
+    <div class="container p-5">
+    <div class="row">${joinedCards}
+    </div>
+    </div>
+    </body
+    
+    </html>`
+    return html;
+};
