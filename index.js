@@ -188,4 +188,31 @@ function addIntern() {
 
 
 
-function createPage()
+function createPage() {
+    const htmlContent = generateIndex(employees);
+    fs.writeFile('./dist/index.html', htmlContent, (err) =>
+    err ? console.log(err) : console.log('Success'))
+}
+
+function generateIndex(answers) {
+    const cards = [];
+    for (let i = 0; i < answers.length; i++) {
+        if (answers[i].getRole() === 'Manager') {
+            const card =
+            `<div class="col">
+            <div class="card shadow mb-5" style="width: 20rem;">
+            <div class="card-body" style="background-color: bisque;">
+                <h2 class ="card-title">${answers[i].name}</h2>
+                <h3 class="card-text">Manager</h3>
+            </div>
+            <ul class="list-group" style="background-color: aquamarine;">
+            <li class="list-group-item">ID:${answers[i].id}</li>
+            <li class="list-group-item">Email: <a href="mailto:${answers[i].email}" class="card-link">${answers[i].email}</a></li>
+            <li class="list-group-item">Office Number: ${answers[i].officeNumber}</li>
+        </ul>
+        </div>
+    </div>`
+        
+        }
+    }
+}
