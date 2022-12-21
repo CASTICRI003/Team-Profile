@@ -127,7 +127,64 @@ function addEngineer() {
 
 
 
-function addIntern()
+function addIntern() {
+    inquirer.prompt([
+        {
+          type: 'input',
+          name: 'name',
+          message: 'What is the Interns name?',
+            validate(answer) {
+              if(!answer) {
+                  return "Please, enter the Intern name!"
+              }
+              return true
+          }
+        },
+        {
+          type: 'number',
+          name: 'id',
+          message: 'What is the Interns id number?',
+            validate(answer) {
+              if(!answer) {
+                  return "Please, enter the Intern employee ID number!"
+              }
+              return true
+          }
+        },
+        {
+          type: 'input',
+          name: 'email',
+          message: 'What is the Interns email address?',
+            validate(answer) {
+              if(!answer) {
+                  return "Please, enter the Intern email address!"
+              }
+              return true
+          }
+        },
+        {
+          type: 'input',
+          name: 'school',
+          message: 'What is the Interns School name?',
+            validate(answer) {
+              if(!answer) {
+                  return "Please, enter the Intern School name!"
+              }
+              return true
+          }
+        },
+      ])
+      .then(answers => {
+        const newIntern = new Intern(
+            answers.name,
+            answers.id,
+            answers.email,
+            answers.school,
+        )
+        employees.push(newIntern);
+        addEmployee();
+      })
+};
 
 
 
