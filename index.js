@@ -1,4 +1,4 @@
-const inquirer = reqiure('./node_modules/inquirer');
+const inquirer = require('./node_modules/inquirer');
 const fs = require('fs');
 const Employee = require('./people/employee');
 const Manager = require('./people/manager');
