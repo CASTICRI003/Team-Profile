@@ -9,8 +9,10 @@ To install inquirer and jest just go to your terminal and type put npm install, 
 
 ## Usage
 This video shows how it's used.
-[label](../../Downloads/Untitled_%20Dec%2020,%202022%209_45%20PM%20(1).webm%0D) [label](../../Downloads/Untitled_%20Dec%2020,%202022%209_45%20PM.webm)
 
+
+[Untitled_ Dec 20, 2022 9_45 PM (1).webm](https://user-images.githubusercontent.com/113932598/208817420-42f87b23-a059-47a2-8cd2-8bf2c2ff502f.webm)
+[Untitled_ Dec 20, 2022 9_45 PM.webm](https://user-images.githubusercontent.com/113932598/208817423-7edeafdb-ed1c-4309-9c21-fef7d7740a27.webm)
 
 
 ## Credits
