@@ -212,7 +212,25 @@ function generateIndex(answers) {
         </ul>
         </div>
     </div>`
+
+    cards.push(card);
         
+        } else if (answers[i].getRole() === 'Engineer') {
+            const card = `<div class="col">
+            <div class="card shadow mb-5" style="width: 20rem;">
+            <div class="card-body" style="background-color: bisque;">
+                <h2 class ="card-title">${answers[i].name} </h2>
+                <h3 class="card-text">Engineer</h3>
+            </div>
+            <ul class="list-group" style="background-color: aquamarine;">
+            <li class="list-group-item">ID: ${answers[i].id}</li>
+            <li class="list-group-item">Email: <a href="mailto: ${answers[i].email}" class="card-link">${answers[i].email}</a></li>
+            <li class="list-group-item">Github:<a href="https://github.com/${answers[i].github}">${answers[i].github}</a></li>
+        </ul>
+        </div>
+    </div>`
+
+    
         }
     }
 }
