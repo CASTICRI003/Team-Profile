@@ -34,10 +34,10 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'email',
-        message: 'What is the Team Managers email address?',
+        message: "What is the manager's email address?",
           validate(answer) {
             if(!answer) {
-                return "Please, enter the Managers email address!"
+                return "Enter the manager's email address."
             }
             return true
         }
@@ -79,7 +79,49 @@ function addEmployee() {
 
 
 
-function addEngineer()
+function addEngineer() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: "What is the engineer's name?",
+            validate(answer) {
+                if (!answer) {
+                    return "Enter the engineer's ID number."
+                } return true
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "What is the engineer's email address?",
+            validate(answer) {
+                if (!answer) {
+                    return "Enter the engineer's email address."
+                } return true
+            }
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: "What is the engineer's GitHub profile?",
+            validate(answer) {
+                if (!answer) {
+                    return "Enter the engineer's GitHub profile."
+                } return true
+            }
+        }
+    ]).then(answers => {
+        const newEngineer = new Engineer(
+            answers.name,
+            answers.id,
+            answers.email,
+            answers.github,
+        )
+        employees.push(newEngineer);
+        addEmployee();
+    })
+};
 
 
 
