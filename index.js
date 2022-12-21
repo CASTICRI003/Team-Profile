@@ -277,3 +277,11 @@ cards.push(card);
     </html>`
     return html;
 };
+
+function init() {
+    addManager();
+};
+
+
+
+init();
